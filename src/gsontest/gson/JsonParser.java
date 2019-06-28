@@ -23,6 +23,7 @@ import com.google.gson.internal.Streams;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonToken;
 import com.google.gson.stream.MalformedJsonException;
+import gsontest.Assessment;
 
 /**
  * A parser to parse Json into a parse tree of {@link JsonElement}s
@@ -90,4 +91,8 @@ public final class JsonParser {
       json.setLenient(lenient);
     }
   }
+
+    public Object parse(Assessment json) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
