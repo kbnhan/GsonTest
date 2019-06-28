@@ -1,17 +1,23 @@
 {
     "title": "Eruptions 1",
     "id": "1.1",
-    "question1": {
-        "type": "MultiChoice",
-        "text": "What is the color of the sky?",
-        "options": ["Red", "Yellow", "Blue", "Green"],
-        "answer": "Blue"
-    },
-    "question2":{
-        "type": "Checkbox",
-        "text": "What is your favorite animal?",
-        "options": ["Cats", "Dogs", "Chinchillas"],
-        "answers": ["Cats", "Dogs"]
-    }
-
+    "questions": 
+    [
+        {
+            "question1": {
+                "type": "MultiChoice",
+                "text": "What is the color of the sky?",
+                "options": ["Red", "Yellow", "Blue", "Green"],
+                "answer": "Blue"
+            }
+        },
+        {
+            "question2": {
+            "type": "Checkbox",
+            "text": "What is your favorite animal?",
+            "options": ["Cats", "Dogs", "Chinchillas"],
+            "answers": ["Cats", "Dogs"]
+            }
+        }
+    ]
 }
