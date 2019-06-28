@@ -5,18 +5,14 @@
  */
 package gsontest;
 
-<<<<<<< HEAD
 import java.util.ArrayList;
 
-=======
->>>>>>> 276186b9c314312f1f20425e031daecf916b9265
 /**
  *
  * @author kevinnhan
  */
 public class Assessment {
     
-<<<<<<< HEAD
     public String title;
     public String id;
     public ArrayList<Question> questions;
@@ -30,9 +26,5 @@ public class Assessment {
     public void addQuestion(Question question) {
         this.questions.add(question);
     }
-=======
-    String title;
-    String id;
->>>>>>> 276186b9c314312f1f20425e031daecf916b9265
     
 }
