@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 [
     "Eruptions 1",
     "1.1",
@@ -17,28 +16,3 @@
     }
 
 ]
-=======
-{
-    "title": "Eruptions 1",
-    "id": "1.1",
-    "questions": 
-    [
-        {
-            "question1": {
-                "type": "MultiChoice",
-                "text": "What is the color of the sky?",
-                "options": ["Red", "Yellow", "Blue", "Green"],
-                "answer": "Blue"
-            }
-        },
-        {
-            "question2": {
-            "type": "Checkbox",
-            "text": "What is your favorite animal?",
-            "options": ["Cats", "Dogs", "Chinchillas"],
-            "answers": ["Cats", "Dogs"]
-            }
-        }
-    ]
-}
->>>>>>> 276186b9c314312f1f20425e031daecf916b9265

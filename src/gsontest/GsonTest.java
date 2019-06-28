@@ -46,12 +46,6 @@ public class GsonTest {
         System.out.println(assessment.id);
         for (int i = 0; i < assessment.questions.size(); i++)
             System.out.println(assessment.questions.get(i).text);
-
-        Assessment json = gson.fromJson(bufferedReader, Assessment.class);
-
-        System.out.println(json.getClass());
-        System.out.println(json.toString());
-        System.out.println(json.title);
         
     }
     
