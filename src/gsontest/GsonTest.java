@@ -32,15 +32,15 @@ public class GsonTest {
         Gson gson = new Gson();
         JsonParser parser = new JsonParser();
         JsonArray array = parser.parse(bufferedReader).getAsJsonArray();
-        String question1_title = gson.fromJson(array.get(0), String.class);
-        String question1_id = gson.fromJson(array.get(1), String.class);
-        // Can use for loop for this part
-        Question question1 = gson.fromJson(array.get(2), Question.class);
-        Question question2 = gson.fromJson(array.get(3), Question.class);
-        
-        Assessment assessment = new Assessment(question1_title, question1_id);
-        assessment.addQuestion(question1);
-        assessment.addQuestion(question2);
+
+        String question_title = gson.fromJson(array.get(0), String.class);
+        String question_id = gson.fromJson(array.get(1), String.class);
+        Assessment assessment = new Assessment(question_title, question_id);
+
+        for (int i = 2; i < array.size(); i++) {
+            Question question = gson.fromJson(array.get(i), Question.class);
+            assessment.addQuestion(question);
+        }
         
         System.out.println(assessment.title);
         System.out.println(assessment.id);
