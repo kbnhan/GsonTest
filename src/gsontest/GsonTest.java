@@ -9,8 +9,6 @@ import com.google.gson.Gson;
 import com.google.gson.JsonParser;
 import com.google.gson.JsonArray;
 
-
-
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
