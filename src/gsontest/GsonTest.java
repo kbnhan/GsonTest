@@ -43,19 +43,22 @@ public class GsonTest {
             switch (question_type) {
                 case "MultiChoice":
                     MultiChoiceFeedback feedback1 = gson.fromJson(array.get(i + 1), MultiChoiceFeedback.class); 
-                    System.out.println(feedback1.correct_feedback);
+                    assessment.addFeedback(feedback1);
                     break;
                 case "Checkbox":
                     CheckboxFeedback feedback2 = gson.fromJson(array.get(i + 1), CheckboxFeedback.class);
-                    System.out.println(feedback2.missing_feedback);
+                    assessment.addFeedback(feedback2);
                     break;
             }
         }
-//        
-//        System.out.println(assessment.title);
-//        System.out.println(assessment.id);
+        
+        System.out.println(assessment.title);
+        System.out.println(assessment.id);
 //        for (int i = 0; i < assessment.questions.size(); i++)
 //            System.out.println(assessment.questions.get(i).text);
+        System.out.println(assessment.question_feedback.get(0));
+        MultiChoiceFeedback question1_feedback = (MultiChoiceFeedback)assessment.question_feedback.get(0);
+        System.out.println(question1_feedback.correct_feedback);
         
     }
     
