@@ -34,16 +34,28 @@ public class GsonTest {
         String question_title = gson.fromJson(array.get(0), String.class);
         String question_id = gson.fromJson(array.get(1), String.class);
         Assessment assessment = new Assessment(question_title, question_id);
+        
 
-        for (int i = 2; i < array.size(); i++) {
+        for (int i = 2; i < array.size(); i += 2) {
             Question question = gson.fromJson(array.get(i), Question.class);
             assessment.addQuestion(question);
+            String question_type = question.type;
+            switch (question_type) {
+                case "MultiChoice":
+                    MultiChoiceFeedback feedback1 = gson.fromJson(array.get(i + 1), MultiChoiceFeedback.class); 
+                    System.out.println(feedback1.correct_feedback);
+                    break;
+                case "Checkbox":
+                    CheckboxFeedback feedback2 = gson.fromJson(array.get(i + 1), CheckboxFeedback.class);
+                    System.out.println(feedback2.missing_feedback);
+                    break;
+            }
         }
-        
-        System.out.println(assessment.title);
-        System.out.println(assessment.id);
-        for (int i = 0; i < assessment.questions.size(); i++)
-            System.out.println(assessment.questions.get(i).text);
+//        
+//        System.out.println(assessment.title);
+//        System.out.println(assessment.id);
+//        for (int i = 0; i < assessment.questions.size(); i++)
+//            System.out.println(assessment.questions.get(i).text);
         
     }
     

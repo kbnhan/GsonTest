@@ -7,12 +7,22 @@
         "options": ["Red", "Yellow", "Blue", "Green"],
         "answers": ["Blue"]
     },
-
+    {
+        "type": "MultiChoice",
+        "correct_feedback": "That's right!",
+        "incorrect_feedback": "That's incorrect! Look again"
+    },
     {
         "type": "Checkbox",
         "text": "What is your favorite animal?",
         "options": ["Cats", "Dogs", "Chinchillas"],
         "answers": ["Cats", "Dogs"]
+    },
+    {
+        "type": "Checkbox",
+        "correct_feedback": "You got them all! Congrats!",
+        "missing_feedback": "Looks like you missed some, try again",
+        "extra_feedback": "Close, looks like you picked an extra one"
     }
 
 ]
