@@ -56,8 +56,8 @@ public class GsonTest {
         System.out.println(assessment.id);
 //        for (int i = 0; i < assessment.questions.size(); i++)
 //            System.out.println(assessment.questions.get(i).text);
-        System.out.println(assessment.question_feedback.get(0));
-        MultiChoiceFeedback question1_feedback = (MultiChoiceFeedback)assessment.question_feedback.get(0);
+        System.out.println(assessment.questions_feedback.get(0));
+        MultiChoiceFeedback question1_feedback = (MultiChoiceFeedback)assessment.questions_feedback.get(0);
         System.out.println(question1_feedback.correct_feedback);
         
     }

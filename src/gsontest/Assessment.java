@@ -16,13 +16,13 @@ public class Assessment {
     public String title;
     public String id;
     public ArrayList<Question> questions;
-    public ArrayList<Object> question_feedback;
+    public ArrayList<Object> questions_feedback;
     
     public Assessment(String title, String id) {
         this.title = title;
         this.id = id;
         this.questions = new ArrayList<Question>();
-        this.question_feedback = new ArrayList<Object>();
+        this.questions_feedback = new ArrayList<Object>();
     }
     
     public void addQuestion(Question question) {
@@ -30,7 +30,7 @@ public class Assessment {
     }
     
     public void addFeedback(Object feedback) {
-        this.question_feedback.add(feedback);
+        this.questions_feedback.add(feedback);
     }
     
 }
